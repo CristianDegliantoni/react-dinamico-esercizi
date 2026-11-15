@@ -4,7 +4,42 @@
     padding: 0;
 }
 
+.lampadina-container {
+    margin: 3rem;
+}
+
 .accesa {
     background-color: yellow;
     width: fit-content;
+
+}
+
+.select-container {
+    margin: 3rem;
+}
+
+.black {
+    background-color: black;
+    color: white;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.red {
+    background-color: red;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.green {
+    background-color: green;
+    width: fit-content;
+    margin-bottom: 1rem;
 }
