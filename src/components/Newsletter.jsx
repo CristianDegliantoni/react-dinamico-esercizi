@@ -5,11 +5,11 @@ export default function Newsletter() {
   const [newsletterInviata, setNewsletterInviata] = useState(false)
 
   return (
-    <div className="newsletter-container" style={{ margin: '3rem' }}>
+    <div className="newsletter-container">
       <h3>📨 Newsletter</h3>
       {!newsletterInviata ? (
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem' }}>
+          <label className="newsletter-label">
             <input
               type="checkbox"
               checked={acconsento}

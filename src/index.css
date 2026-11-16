@@ -4,20 +4,47 @@
     padding: 0;
 }
 
-.lampadina-container {
-    margin: 3rem;
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #333;
+    line-height: 1.5;
 }
 
+/* Layout App */
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.app-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Spaziatura sezioni */
+.lampadina-container,
+.select-container,
+.password-changer,
+.newsletter-container,
+.preventivo-container,
+.tavoli-container {
+    margin: 2rem 0;
+}
+
+/* Esercizio 1: Lampadina */
 .accesa {
     background-color: yellow;
     width: fit-content;
-
 }
 
-.select-container {
-    margin: 3rem;
-}
-
+/* Esercizio 2: Selettore Colore */
 .black {
     background-color: black;
     color: white;
@@ -44,6 +71,75 @@
     margin-bottom: 1rem;
 }
 
-.password-changer {
-    margin: 3rem;
+/* Esercizio 3: Cambio Password */
+.password-changer input {
+    margin-bottom: 0.5rem;
+}
+
+/* Esercizio 4: Newsletter */
+.newsletter-label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Esercizio 5: Preventivo */
+.preventivo-row {
+    margin-bottom: 0.5rem;
+}
+
+/* Esercizio 6 (FINAL BOSS): Gestione Tavoli */
+.tavoli-form {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tavoli-inputs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.error-message {
+    color: red;
+    margin-top: 0.5rem;
+}
+
+.tavoli-empty {
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.tavoli-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.tavolo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    max-width: 500px;
+}
+
+.tavolo-date {
+    color: #555;
+}
+
+.btn-delete {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #d9363e;
 }

@@ -56,12 +56,12 @@ export default function GestioneTavoli() {
   const totaleOspiti = tavoli.reduce((acc, t) => acc + t.ospiti, 0)
 
   return (
-    <div className="tavoli-container" style={{ margin: '3rem' }}>
+    <div className="tavoli-container">
       <h2>🐐 FINAL BOSS: Gestione Prenotazioni Tavoli</h2>
 
       {/* Form di aggiunta */}
-      <form onSubmit={handleSubmit} style={{ marginTop: '1rem', marginBottom: '1.5rem' }}>
-        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
+      <form onSubmit={handleSubmit} className="tavoli-form">
+        <div className="tavoli-inputs">
           <input
             type="text"
             placeholder="Nome prenotazione"
@@ -82,7 +82,7 @@ export default function GestioneTavoli() {
           />
           <button type="submit">Aggiungi Tavolo</button>
         </div>
-        {errore && <p style={{ color: 'red', marginTop: '0.5rem' }}>{errore}</p>}
+        {errore && <p className="error-message">{errore}</p>}
       </form>
 
       {/* Riepilogo conteggi */}
@@ -93,38 +93,19 @@ export default function GestioneTavoli() {
 
       {/* Lista delle prenotazioni con map() */}
       {tavoli.length === 0 ? (
-        <p style={{ marginTop: '1rem', fontStyle: 'italic' }}>Nessuna prenotazione presente.</p>
+        <p className="tavoli-empty">Nessuna prenotazione presente.</p>
       ) : (
-        <ul style={{ listStyle: 'none', padding: 0, marginTop: '1rem' }}>
+        <ul className="tavoli-list">
           {tavoli.map((tavolo) => (
-            <li
-              key={tavolo.id}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                padding: '0.6rem 1rem',
-                border: '1px solid #ccc',
-                borderRadius: '6px',
-                marginBottom: '0.5rem',
-                maxWidth: '500px',
-              }}
-            >
+            <li key={tavolo.id} className="tavolo-item">
               <div>
                 <strong>{tavolo.nome}</strong> — {tavolo.ospiti} ospiti
                 <br />
-                <small style={{ color: '#555' }}>Data: {tavolo.data}</small>
+                <small className="tavolo-date">Data: {tavolo.data}</small>
               </div>
               <button
                 onClick={() => eliminaTavolo(tavolo.id)}
-                style={{
-                  backgroundColor: '#ff4d4f',
-                  color: 'white',
-                  border: 'none',
-                  padding: '0.3rem 0.6rem',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                }}
+                className="btn-delete"
               >
                 Elimina
               </button>

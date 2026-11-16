@@ -11,9 +11,9 @@ export default function Preventivo() {
   const totalePreventivo = ore * tariffa + extraBonus
 
   return (
-    <div className="preventivo-container" style={{ margin: '3rem' }}>
+    <div className="preventivo-container">
       <h3>💰 Preventivo</h3>
-      <div style={{ marginBottom: '0.5rem' }}>
+      <div className="preventivo-row">
         <label>
           Tariffa oraria (€):{' '}
           <input
@@ -25,7 +25,7 @@ export default function Preventivo() {
           />
         </label>
       </div>
-      <div style={{ marginBottom: '0.5rem' }}>
+      <div className="preventivo-row">
         <label>
           Ore lavorate:{' '}
           <input
