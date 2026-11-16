@@ -2,10 +2,7 @@ import { useState } from 'react'
 
 export default function GestioneTavoli() {
   // 1. Array di oggetti nello stato (come nella ToDo List)
-  const [tavoli, setTavoli] = useState([
-    { id: 1, nome: 'Mario Rossi', ospiti: 4, data: '2026-11-20' },
-    { id: 2, nome: 'Giulia Bianchi', ospiti: 2, data: '2026-11-21' },
-  ])
+  const [tavoli, setTavoli] = useState([])
 
   // 2. Stati controllati per i campi del form
   const [nome, setNome] = useState('')
